@@ -61,9 +61,9 @@ async function addPlugin(pluginName, targetAppWorkspace) {
   fs.copyFileSync(path.join(srcPluginDir,'cds-plugin.js'), path.join(pluginDir,'cds-plugin.js'))
 
   if(targetAppWorkspace)
-    await execCommand(npm,['add','-w',targetAppWorkspace,targetPluginName]);
+    await execCommand(npm,['add','-D','-w',targetAppWorkspace,targetPluginName]);
   else
-    await execCommand(npm,['add',targetPluginName]);
+    await execCommand(npm,['add','-D',targetPluginName]);
 
   copyFiles(path.join(srcPluginDir,'files'), pluginDir);
 
