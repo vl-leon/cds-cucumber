@@ -10,7 +10,7 @@
     "@sap/cds": "*",
     "@sap/cds-dk": "*",
     "express": "*",
-    "sqlite3": "*"
+    "@cap-js/sqlite": "*"
   },
   "scripts": {
     "start": "npx cds-serve"
